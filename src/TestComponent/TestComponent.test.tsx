@@ -7,10 +7,7 @@ import { TestComponentProps } from "./TestComponent.types";
 describe("TestComponent", () => {
   const renderComponent = ({ heading, content }: Partial<TestComponentProps>) =>
     render(
-      <TestComponent
-        heading={heading || "Default heading text"}
-        content={content || <div>Default content</div>}
-      />
+      <TestComponent />
     );
 
   it("should render heading text correctly", () => {

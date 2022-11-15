@@ -1,0 +1,184 @@
+/* 
+  Button.scss 
+  - Includes all default styles for the button component
+*/
+@import "core/variables";
+@import "core/mixins";
+
+// Buttons
+.btn {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  background-color: $light-color;
+  border: none;
+  color: $body-font-color;
+  font-size: $font-size;
+  font-weight: 600;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: top;
+  padding-top: 0;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  padding-bottom: 0;
+  display: inline-block;
+  height: $control-size;
+  min-width: 4rem;
+  line-height: $line-height;
+  outline: transparent;
+  border: 0.05rem solid transparent;
+  border-image: initial;
+  border-radius: 0;
+  user-select: none;
+  white-space: nowrap;
+  &:focus,
+  &:hover {
+    background: $light-color-1;
+    text-decoration: none;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  // Button Primary
+  &.btn-primary {
+    background-color: $primary-color;
+    color: $dark-color;
+    &:focus,
+    &:hover {
+      background: $primary-color-dark;
+    }
+  }
+
+  // Button Secondary
+  &.btn-secondary {
+    background-color: $secondary-color;
+    color: $light-color;
+    &:focus,
+    &:hover {
+      background: $secondary-color-dark;
+    }
+  }
+
+  // Button disabled
+  &.btn-disabled {
+    background-color: $gray-disabled;
+    color: $gray-disabled-text;
+    &:focus,
+    &:hover {
+      cursor: default;
+      background: darken($gray-disabled, 5%);
+    }
+  }
+
+  &.btn-action {
+    background-color: $dark-color;
+    color: $light-color;
+    &:focus,
+    &:hover {
+      background: lighten($dark-color, 5%);
+    }
+  }
+
+  // Button Colors
+  &.btn-success {
+    @include button-variant($success-color);
+  }
+
+  &.btn-error {
+    @include button-variant($error-color);
+  }
+
+  // Button Link
+  &.btn-link {
+    background: transparent;
+    border-color: transparent;
+    color: $link-color;
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      color: $link-color-dark;
+    }
+  }
+
+  // Button Sizes
+  &.btn-sm {
+    font-size: $font-size-sm;
+    height: $control-size-sm;
+    padding: $control-padding-y-sm $control-padding-x-sm;
+  }
+
+  &.btn-lg {
+    font-size: $font-size-lg;
+    height: $control-size-lg;
+    padding: $control-padding-y-lg $control-padding-x-lg;
+  }
+
+  // Button Block
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+
+  // Button Action
+  &.btn-action {
+    width: $control-size;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.btn-sm {
+      width: $control-size-sm;
+    }
+
+    &.btn-lg {
+      width: $control-size-lg;
+    }
+  }
+
+
+
+// Button groups
+.btn-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  .btn {
+    flex: 1 0 auto;
+    &:first-child:not(:last-child) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      margin-left: -$border-width;
+    }
+    &:last-child:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      margin-left: -$border-width;
+    }
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      z-index: $zindex-0;
+    }
+  }
+
+  &.btn-group-block {
+    display: flex;
+
+    .btn {
+      flex: 1 0 0;
+    }
+  }
+}
+}

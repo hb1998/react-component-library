@@ -5,25 +5,25 @@
 .bf-ui-form-select {
   -webkit-appearance: none !important;
   appearance: none;
-  border: 0.05rem solid #a6a6a6;
+  border: 0.05rem solid var(--box-border-color);
   border-radius: 0.1rem;
   color: inherit;
   font-size: 0.7rem;
-  /* height: 2rem; */
-  height: 2.5rem;
+  height: 2rem;
+  /* height: 2.5rem; */
   line-height: 1.2rem;
   outline: none;
   margin-top: 0.4rem;
   padding: 0 0.4rem;
   vertical-align: middle;
-  /* width: 100%; */
-  width: 100px;
+  width: 100%;
+  /* width: 100px; */
   background: transparent;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-right: 0.6rem;
-  background: #fff
+  background:var( --light-color)
     url("data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTEyMS4zLDM0LjZjLTEuNi0xLjYtNC4yLTEuNi01LjgsMGwtNTEsNTEuMS01MS4xLTUxLjFjLTEuNi0xLjYtNC4yLTEuNi01LjgsMC0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTMuOSw1My45YzAuOCwwLjggMS44LDEuMiAyLjksMS4yIDEsMCAyLjEtMC40IDIuOS0xLjJsNTMuOS01My45YzEuNy0xLjYgMS43LTQuMiAwLjEtNS44eiIgZmlsbD0iIzAwMDAwMCIvPgogIDwvZz4KPC9zdmc+Cg==")
     no-repeat right 0.35rem center/0.4rem 0.5rem !important;
 }
@@ -58,7 +58,7 @@
 
 .has-success .bf-ui-form-select,
 .bf-ui-form-select.is-success {
-  background: #fdfef2;
+  background:var( --light-color);
   border-color: #bad80a;
 }
 .has-success .bf-ui-form-select:focus,
@@ -67,9 +67,9 @@
 }
 .has-error .bf-ui-form-select,
 .bf-ui-form-select.is-error {
-  background: white;
-  border-color: #e81123;
-  color: #e81123;
+  background:var(--light-color) ;
+  border-color: var(--error-color);
+  color:var(--error-color);
 }
 .has-error .bf-ui-form-select:focus,
 .bf-ui-form-select.is-error:focus {
@@ -78,7 +78,7 @@
 
 .bf-ui-form-select:disabled,
 .bf-ui-form-select.disabled {
-  background-color: #f7f7f7 !important;
+  background-color: var(--light-color) !important;
   cursor: not-allowed;
   opacity: 0.5;
 }

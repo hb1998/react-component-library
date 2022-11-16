@@ -21,3 +21,8 @@
   }
 }
 
+:root {
+  --light-color: #f8f8f8;
+  --error-color:#e81123;
+  --box-border-color:#a6a6a6;
+}

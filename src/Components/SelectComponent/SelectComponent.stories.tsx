@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Box } from "../../../util/layout/Box";
 import { Select } from "./SelectComponent";
 
@@ -8,6 +8,13 @@ export default {
 
 
 const SelectContainer = (props) => {
+  const [value,setValue] = useState<string>('')
+
+  const valueFromSelect = (e:string) => {
+    setValue(e)
+    console.log(value);
+    
+  }
   const options = [
     {
       value: "first-item",
@@ -31,8 +38,9 @@ const SelectContainer = (props) => {
           <Select
             defaultValue={"second-item"}
             options={options}
-            placeholder="This is a default select"
-          />
+            placeholder="This is a default select" onBlur={function (value: any): unknown {
+              throw new Error("Function not implemented.");
+            } } onChange={()=>valueFromSelect}          />
         </Box>
       </Box>
       <Box className="columns pb-16">
@@ -40,8 +48,8 @@ const SelectContainer = (props) => {
           <Select
             options={options}
             placeholder="This is a default select (with value)"
-            value="first-item"
-          />
+            value="first-item" onBlur={function (value: any): unknown {
+              throw new Error("Function not implemented.")}} onChange={()=>valueFromSelect}          />
         </Box>
       </Box>
       <Box className="columns pb-16">
@@ -50,8 +58,9 @@ const SelectContainer = (props) => {
             options={options}
             placeholder="This has an error"
             error={true}
-            value="first-item"
-          />
+            value="first-item" onBlur={function (value: any): unknown {
+              throw new Error("Function not implemented.");
+            } } onChange={()=>valueFromSelect}          />
         </Box>
       </Box>
       <Box className="columns pb-16">
@@ -60,8 +69,9 @@ const SelectContainer = (props) => {
             options={options}
             placeholder="This is a disabled select"
             disabled={true}
-            value="first-item"
-          />
+            value="first-item" onBlur={function (value: any): unknown {
+              throw new Error("Function not implemented.");
+            } } onChange={()=>valueFromSelect}          />
         </Box>
       </Box>
     </Box>

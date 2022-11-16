@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import '../../css/Box.css';
+import './Box.css';
 
 export const Box = props => {
   const {

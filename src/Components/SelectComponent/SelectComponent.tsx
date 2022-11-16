@@ -4,11 +4,11 @@ import { ISelectProps } from "./SelectComponent.types";
 import "./SelectComponent.css";
 
 export const Select = (props: ISelectProps) => {
-  const onEventChange = (e:any) => {
+  const onEventChange = (e: { target: { value: any; }; }) => {
     props.onChange(e.target.value);
     return;
   };
-  const onEventBlur = (e: any) => {
+  const onEventBlur = (e:any) => {
     props.onBlur(e.target.value);
     props=e.target.value;
     return;

@@ -1,0 +1,33 @@
+.form-expression-input .search-dropdown {
+  width: 175px;
+  border: 1px solid #e6e6e6;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 2px;
+  position: absolute;
+  max-height: 180px;
+  overflow: auto;
+  background-color: #ffffff;
+}
+.form-expression-input .expression-input {
+  line-height: 1.2rem;
+}
+.form-expression-input .error-label-expression-input {
+  color: #e53935;
+  padding-top: 10px;
+}
+.form-expression-input .searched-item {
+  padding: 10px 20px;
+}
+.form-expression-input .expressionInput-note {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 3px;
+}
+.form-expression-input .expressionInput-note .icon {
+  padding-right: 4px;
+  cursor: pointer;
+}

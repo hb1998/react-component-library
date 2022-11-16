@@ -1,0 +1,65 @@
+/* CSS for List Component */
+.list {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.list-item {
+  padding: 8px 8px;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.list-item:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.list-item .list-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.list-item .list-header {
+  padding-left: 4px;
+}
+.list-item .list-title {
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+.list-item .list-subtitle {
+  font-size: 0.5rem;
+  line-height: 0.65rem;
+  white-space: normal;
+  margin-bottom: 0;
+  display: block;
+  color: #989898;
+}
+.list-item .list-icon {
+  align-content: center;
+  align-items: center;
+  background: #0078d4;
+  border-radius: 72px;
+  color: #fff;
+  display: flex;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+.list-item .list-action .btn {
+  min-width: auto;
+  background: none;
+  padding: 0 6px;
+}
+.list-item .list-action .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.list-item .list-action .btn:hover {
+  opacity: 0.8;
+}

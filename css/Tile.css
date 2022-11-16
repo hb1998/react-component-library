@@ -1,0 +1,81 @@
+/* 
+  Tile.scss 
+  - Includes all default styles for the tile component
+*/
+.tile {
+  background-color: #f4f4f4;
+  margin: 10px 0;
+  padding: 1rem;
+}
+.tile:hover {
+  background-color: #e7e7e7;
+  cursor: pointer;
+}
+.tile:focus, .tile:active {
+  background-color: #f4f4f4;
+  outline: 0;
+}
+.tile .flex-container {
+  display: flex;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  min-width: 100%;
+}
+.tile .flex-container .text-container {
+  flex-grow: 1;
+  text-align: left;
+}
+.tile .tile-title {
+  margin: 0;
+  margin-bottom: 5px;
+  line-height: 100%;
+  font-weight: 600;
+  color: #333333;
+  font-size: 13px;
+}
+.tile .tile-desc {
+  font-weight: 400;
+  font-size: 12px;
+  color: #333333;
+}
+.tile .tile-icon {
+  margin-right: 12px;
+  color: #333333;
+}
+.tile[disabled], .tile:disabled, .tile.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.tile[disabled]:hover, .tile:disabled:hover, .tile.disabled:hover {
+  cursor: default;
+}
+.tile.tile-primary {
+  background-color: #f2c811;
+  color: #212121;
+}
+.tile.tile-primary:focus, .tile.tile-primary:hover {
+  background: #ddb60c;
+}
+.tile.tile-secondary {
+  background-color: #0078d4;
+}
+.tile.tile-secondary:focus, .tile.tile-secondary:hover {
+  background: #006abb;
+}
+.tile.tile-secondary .tile-title, .tile.tile-secondary .tile-desc, .tile.tile-secondary .tile-icon {
+  color: #f4f4f4;
+}
+.tile.tile-disabled {
+  background-color: #f4f4f4;
+  color: #a6a6a6;
+}
+.tile.tile-disabled:focus, .tile.tile-disabled:hover {
+  cursor: default;
+  background-color: #f4f4f4;
+}
+.tile.tile-disabled .tile-title, .tile.tile-disabled .tile-desc, .tile.tile-disabled .tile-icon {
+  color: #a6a6a6;
+}

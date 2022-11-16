@@ -1,0 +1,11 @@
+/* 
+  Form.scss 
+  - Includes all default styles for the Form component
+*/
+.form .form-footer-button {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-top: 24px;
+}

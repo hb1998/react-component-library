@@ -1,0 +1,842 @@
+/* 
+  Icon.scss 
+  - Includes all basic icons
+*/
+@font-face {
+  font-family: "CF_icons";
+  src: url("../fonts/icons8.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.icons8-alert:before,
+.icons8-bold:before,
+.icons8-bulb:before,
+.icons8-chevron-down:before,
+.icons8-chevron-up:before,
+.icons8-circle:before,
+.icons8-circle-fill:before,
+.icons8-cross:before,
+.icons8-cross-solid:before,
+.icons8-diamond:before,
+.icons8-double-down:before,
+.icons8-double-up:before,
+.icons8-down:before,
+.icons8-down-left:before,
+.icons8-down-right:before,
+.icons8-fill-colour:before,
+.icons8-flag:before,
+.icons8-flag-outline:before,
+.icons8-flag-triangle:before,
+.icons8-font-colour:before,
+.icons8-half:before,
+.icons8-heart:before,
+.icons8-iso-down:before,
+.icons8-iso-up:before,
+.icons8-italic:before,
+.icons8-left:before,
+.icons8-minus:before,
+.icons8-quarter:before,
+.icons8-right:before,
+.icons8-semi:before,
+.icons8-three-quarters:before,
+.icons8-tick:before,
+.icons8-tick-solid:before,
+.icons8-triangle-down:before,
+.icons8-triangle-up:before,
+.icons8-underline:before,
+.icons8-up:before,
+.icons8-up-left:before,
+.icons8-up-right:before,
+.icons8-stop-solid:before,
+.icons8-three-quarter-fill:before,
+.icons8-stop-outline:before,
+.icons8-alert_solid:before,
+.icons8-quarter-fill:before,
+.icons8-star:before,
+.icons8-star-full:before,
+.icons8-star-half:before,
+[data-icons8]:before {
+  display: inline-block;
+  font-family: "CF_icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+[data-icons8]:before {
+  content: attr(data-icons8);
+}
+
+.icons8-alert:before {
+  content: "\f100";
+}
+
+.icons8-bold:before {
+  content: "\f102";
+}
+
+.icons8-bulb:before {
+  content: "\f103";
+}
+
+.icons8-chevron-down:before {
+  content: "\f104";
+}
+
+.icons8-chevron-up:before {
+  content: "\f105";
+}
+
+.icons8-circle:before {
+  content: "\f106";
+}
+
+.icons8-circle-fill:before {
+  content: "\f107";
+}
+
+.icons8-cross:before {
+  content: "\f108";
+}
+
+.icons8-cross-solid:before {
+  content: "\f109";
+}
+
+.icons8-diamond:before {
+  content: "\f10a";
+}
+
+.icons8-double-down:before {
+  content: "\f10b";
+}
+
+.icons8-double-up:before {
+  content: "\f10c";
+}
+
+.icons8-down:before {
+  content: "\f10d";
+}
+
+.icons8-down-left:before {
+  content: "\f10e";
+}
+
+.icons8-down-right:before {
+  content: "\f10f";
+}
+
+.icons8-fill-colour:before {
+  content: "\f110";
+}
+
+.icons8-flag:before {
+  content: "\f111";
+}
+
+.icons8-flag-outline:before {
+  content: "\f112";
+}
+
+.icons8-flag-triangle:before {
+  content: "\f113";
+}
+
+.icons8-font-colour:before {
+  content: "\f114";
+}
+
+.icons8-half:before {
+  content: "\f115";
+}
+
+.icons8-heart:before {
+  content: "\f116";
+}
+
+.icons8-iso-down:before {
+  content: "\f117";
+}
+
+.icons8-iso-up:before {
+  content: "\f118";
+}
+
+.icons8-italic:before {
+  content: "\f119";
+}
+
+.icons8-left:before {
+  content: "\f11a";
+}
+
+.icons8-minus:before {
+  content: "\f11b";
+}
+
+.icons8-quarter:before {
+  content: "\f11c";
+}
+
+.icons8-right:before {
+  content: "\f11e";
+}
+
+.icons8-semi:before {
+  content: "\f11f";
+}
+
+.icons8-three-quarters:before {
+  content: "\f123";
+}
+
+.icons8-tick:before {
+  content: "\f124";
+}
+
+.icons8-tick-solid:before {
+  content: "\f125";
+}
+
+.icons8-triangle-down:before {
+  content: "\f126";
+}
+
+.icons8-triangle-up:before {
+  content: "\f127";
+}
+
+.icons8-underline:before {
+  content: "\f128";
+}
+
+.icons8-up:before {
+  content: "\f129";
+}
+
+.icons8-up-left:before {
+  content: "\f12a";
+}
+
+.icons8-up-right:before {
+  content: "\f12b";
+}
+
+.icons8-stop-solid:before {
+  content: "\f12d";
+}
+
+.icons8-three-quarter-fill:before {
+  content: "\f12f";
+}
+
+.icons8-stop-outline:before {
+  content: "\f130";
+}
+
+.icons8-alert_solid:before {
+  content: "\f131";
+}
+
+.icons8-quarter-fill:before {
+  content: "\f132";
+}
+
+.icons8-star:before {
+  content: "\f133";
+}
+
+.icons8-star-full:before {
+  content: "\f134";
+}
+
+.icons8-star-half:before {
+  content: "\f135";
+}
+
+@font-face {
+  font-family: "FabricMDL2Icons";
+  src: url("../fonts/fabric-icons.woff") format("woff");
+}
+.icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "FabricMDL2Icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  color: #212121;
+}
+
+.icon--GlobalNavButton:before {
+  content: "\e700";
+}
+
+.icon--Brightness:before {
+  content: "\e706";
+}
+
+.icon--MapPin:before {
+  content: "\e707";
+}
+
+.icon--QuickNote:before {
+  content: "\e70b";
+}
+
+.icon--ChevronDown:before {
+  content: "\e70d";
+}
+
+.icon--ChevronUp:before {
+  content: "\e70e";
+}
+
+.icon--Edit:before {
+  content: "\e70f";
+}
+
+.icon--Add:before {
+  content: "\e710";
+}
+
+.icon--Cancel:before {
+  content: "\e711";
+}
+
+.icon--More:before {
+  content: "\e712";
+}
+
+.icon--Settings:before {
+  content: "\e713";
+}
+
+.icon--Mail:before {
+  content: "\e715";
+}
+
+.icon--People:before {
+  content: "\e716";
+}
+
+.icon--Stop:before {
+  content: "\e71a";
+}
+
+.icon--Filter:before {
+  content: "\e71c";
+}
+
+.icon--AllApps:before {
+  content: "\e71d";
+}
+
+.icon--Zoom:before {
+  content: "\e71e";
+}
+
+.icon--ZoomOut:before {
+  content: "\e71f";
+}
+
+.icon--Search:before {
+  content: "\e721";
+}
+
+.icon--Attach:before {
+  content: "\e723";
+}
+
+.icon--Send:before {
+  content: "\e724";
+}
+
+.icon--Forward:before {
+  content: "\e72a";
+}
+
+.icon--Back:before {
+  content: "\e72b";
+}
+
+.icon--Refresh:before {
+  content: "\e72c";
+}
+
+.icon--Lock:before {
+  content: "\e72e";
+}
+
+.icon--Blocked:before {
+  content: "\e733";
+}
+
+.icon--FavoriteStar:before {
+  content: "\e734";
+}
+
+.icon--FavoriteStarFill:before {
+  content: "\e735";
+}
+
+.icon--Checkbox:before {
+  content: "\e739";
+}
+
+.icon--CheckboxComposite:before {
+  content: "\e73a";
+}
+
+.icon--CheckboxFill:before {
+  content: "\e73b";
+}
+
+.icon--CheckboxCompositeReversed:before {
+  content: "\e73d";
+}
+
+.icon--CheckMark:before {
+  content: "\e73e";
+}
+
+.icon--BackToWindow:before {
+  content: "\e73f";
+}
+
+.icon--FullScreen:before {
+  content: "\e740";
+}
+
+.icon--Print:before {
+  content: "\e749";
+}
+
+.icon--Up:before {
+  content: "\e74a";
+}
+
+.icon--Down:before {
+  content: "\e74b";
+}
+
+.icon--Delete:before {
+  content: "\e74d";
+}
+
+.icon--Save:before {
+  content: "\e74e";
+}
+
+.icon--ReturnKey:before {
+  content: "\e751";
+}
+
+.icon--Cloud:before {
+  content: "\e753";
+}
+
+.icon--Sad:before {
+  content: "\e757";
+}
+
+.icon--PageLeft:before {
+  content: "\e760";
+}
+
+.icon--PageRight:before {
+  content: "\e761";
+}
+
+.icon--KeyboardClassic:before {
+  content: "\e765";
+}
+
+.icon--Play:before {
+  content: "\e768";
+}
+
+.icon--Pause:before {
+  content: "\e769";
+}
+
+.icon--ChevronLeft:before {
+  content: "\e76b";
+}
+
+.icon--ChevronRight:before {
+  content: "\e76c";
+}
+
+.icon--Emoji2:before {
+  content: "\e76e";
+}
+
+.icon--Globe:before {
+  content: "\e774";
+}
+
+.icon--Contact:before {
+  content: "\e77b";
+}
+
+.icon--Unlock:before {
+  content: "\e785";
+}
+
+.icon--AutoEnhanceOn:before {
+  content: "\e78d";
+}
+
+.icon--Light:before {
+  content: "\e793";
+}
+
+.icon--Redo:before {
+  content: "\e7a6";
+}
+
+.icon--Undo:before {
+  content: "\e7a7";
+}
+
+.icon--Crop:before {
+  content: "\e7a8";
+}
+
+.icon--Warning:before {
+  content: "\e7ba";
+}
+
+.icon--Flag:before {
+  content: "\e7c1";
+}
+
+.icon--Page:before {
+  content: "\e7c3";
+}
+
+.icon--Tab:before {
+  content: "\e7e9";
+}
+
+.icon--Pinned:before {
+  content: "\e840";
+}
+
+.icon--RevToggleKey:before {
+  content: "\e845";
+}
+
+.icon--Previous:before {
+  content: "\e892";
+}
+
+.icon--Next:before {
+  content: "\e893";
+}
+
+.icon--Clear:before {
+  content: "\e894";
+}
+
+.icon--Sync:before {
+  content: "\e895";
+}
+
+.icon--Download:before {
+  content: "\e896";
+}
+
+.icon--Help:before {
+  content: "\e897";
+}
+
+.icon--OpenInNewWindow:before {
+  content: "\e8a7";
+}
+
+.icon--Switch:before {
+  content: "\e8ab";
+}
+
+.icon--ChromeClose:before {
+  content: "\e8bb";
+}
+
+.icon--Message:before {
+  content: "\e8bd";
+}
+
+.icon--Copy:before {
+  content: "\e8c8";
+}
+
+.icon--Like:before {
+  content: "\e8e1";
+}
+
+.icon--AddFriend:before {
+  content: "\e8fa";
+}
+
+.icon--Accept:before {
+  content: "\e8fb";
+}
+
+.icon--Comment:before {
+  content: "\e90a";
+}
+
+.icon--Repair:before {
+  content: "\e90f";
+}
+
+.icon--FullCircleMask:before {
+  content: "\e91f";
+}
+
+.icon--LocationFill:before {
+  content: "\e920";
+}
+
+.icon--FlickDown:before {
+  content: "\e935";
+}
+
+.icon--FlickUp:before {
+  content: "\e936";
+}
+
+.icon--FlickLeft:before {
+  content: "\e937";
+}
+
+.icon--FlickRight:before {
+  content: "\e938";
+}
+
+.icon--Code:before {
+  content: "\e943";
+}
+
+.icon--Info:before {
+  content: "\e946";
+}
+
+.icon--CalculatorMultiply:before {
+  content: "\e947";
+}
+
+.icon--CalculatorAddition:before {
+  content: "\e948";
+}
+
+.icon--CalculatorSubtract:before {
+  content: "\e949";
+}
+
+.icon--CalculatorEqualTo:before {
+  content: "\e94e";
+}
+
+.icon--ChevronUpSmall:before {
+  content: "\e96d";
+}
+
+.icon--ChevronDownSmall:before {
+  content: "\e96e";
+}
+
+.icon--ChevronLeftSmall:before {
+  content: "\e96f";
+}
+
+.icon--ChevronRightSmall:before {
+  content: "\e970";
+}
+
+.icon--ChevronUpMed:before {
+  content: "\e971";
+}
+
+.icon--ChevronDownMed:before {
+  content: "\e972";
+}
+
+.icon--ChevronLeftMed:before {
+  content: "\e973";
+}
+
+.icon--ChevronRightMed:before {
+  content: "\e974";
+}
+
+.icon--LightBulb:before {
+  content: "\ea80";
+}
+
+.icon--MoreVertical:before {
+  content: "\f2bc";
+}
+
+.icon--CalculatorNotEqualTo:before {
+  content: "\f2d2";
+}
+
+.icon--HalfAlpha:before {
+  content: "\e97e";
+}
+
+.icon--StatusCircleCheckmark:before {
+  content: "\f13e";
+}
+
+.icon--Bold:before {
+  content: "\e8dd";
+}
+
+.icon--SemiboldWeight:before {
+  content: "\f4f0";
+}
+
+.icon--BucketColor:before {
+  content: "\f1b6";
+}
+
+.icon--Italic:before {
+  content: "\e8db";
+}
+
+.icon--Hide3:before {
+  content: "\f6ac";
+}
+
+.icon--Reset:before {
+  content: "\e423";
+}
+
+.icon--Line:before {
+  content: "\f4fc";
+}
+
+.icon--ArrowTallDownLeft:before {
+  content: "\f2bf";
+}
+
+.icon--ArrowTallUpLeft:before {
+  content: "\f2bd";
+}
+
+.icon--ArrowTallUpRight:before {
+  content: "\f2be";
+}
+
+.icon--CalculatorPercentage:before {
+  content: "\e94c";
+}
+
+.icon--CaretSolidUp:before {
+  content: "\f090";
+}
+
+.icon--ChromeMinimize:before {
+  content: "\e921";
+}
+
+.icon--DisableUpdates:before {
+  content: "\e8d8";
+}
+
+.icon--HalfCircle:before {
+  content: "\f501";
+}
+
+.icon--IconSetsFlag:before {
+  content: "\f2a4";
+}
+
+.icon--QuarterCircle:before {
+  content: "\f502";
+}
+
+.icon--SortDown:before {
+  content: "\ee69";
+}
+
+.icon--SquareShape:before {
+  content: "\f1a6";
+}
+
+.icon--SquareShapeSolid:before {
+  content: "\f63d";
+}
+
+.icon--StatusCircleInner:before {
+  content: "\f137";
+}
+
+.icon--StatusCircleRing:before {
+  content: "\f138";
+}
+
+.icon--ThreeQuarterCircle:before {
+  content: "\f503";
+}
+
+.icon--Underline:before {
+  content: "\e8dc";
+}
+
+.icon--ArrowTallDownRight:before {
+  content: "\f2c0";
+}
+
+.icon--TriangleSolidUp12:before {
+  content: "\eecc";
+}
+
+.icon--TriangleSolidDown12:before {
+  content: "\eecd";
+}
+
+.icon--StockUp:before {
+  content: "\eb11";
+}
+
+.icon--StockDown:before {
+  content: "\eb0f";
+}
+
+.icon--WorkItemBar:before {
+  content: "\f35c";
+}
+
+.icon--WorkItemBarSolid:before {
+  content: "\f35d";
+}
+
+.icon--DoubleChevronUp:before {
+  content: "\edbd";
+}
+
+.icon--DoubleChevronDown:before {
+  content: "\ee04";
+}
+
+.icon--Link:before {
+  content: "\e71b";
+}
+
+.icon--Link12:before {
+  content: "\e920";
+}

@@ -1,0 +1,102 @@
+/* 
+  Checkbox.scss 
+  - Includes all default styles for the Checkbox component
+*/
+.form-checkbox {
+  font-size: 13px;
+  display: block;
+  line-height: 1.2rem;
+  margin: 0.2rem 0;
+  min-height: 1.2rem;
+  padding: 0.1rem 0.4rem 0.1rem 1.2rem;
+  position: relative;
+}
+.form-checkbox input {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+.form-checkbox input:focus + .form-icon {
+  border-color: #a6a6a6;
+}
+.form-checkbox input:checked + .form-icon {
+  background: #f4f4f4;
+  border-color: #0078d4;
+  box-shadow: none;
+}
+.form-checkbox .form-icon {
+  border: 0.05rem solid #adadad;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.form-checkbox .form-icon {
+  background: #f4f4f4;
+  height: 0.8rem;
+  left: 0;
+  top: 0.3rem;
+  width: 0.8rem;
+}
+.form-checkbox input:active + .form-icon {
+  background: #f7f7f7;
+}
+
+.form-checkbox .form-icon {
+  border-color: #333333;
+  border-radius: none;
+}
+.form-checkbox input:checked + .form-icon {
+  background-color: #0078d4;
+}
+.form-checkbox input:checked + .form-icon::before {
+  background-clip: padding-box;
+  border: 0.1rem solid #f4f4f4;
+  border-left-width: 0;
+  border-top-width: 0;
+  content: "";
+  height: 9px;
+  left: 50%;
+  margin-left: -3px;
+  margin-top: -6px;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+.has-error .form-checkbox, .form-checkbox.is-error {
+  color: #e81123;
+}
+.has-error .form-checkbox .form-icon, .form-checkbox.is-error .form-icon {
+  border-color: #e81123;
+}
+.has-error .form-checkbox input:checked + .form-icon, .form-checkbox.is-error input:checked + .form-icon {
+  background: #e81123;
+  border-color: #e81123;
+}
+.has-error .form-checkbox input:focus + .form-icon, .form-checkbox.is-error input:focus + .form-icon {
+  box-shadow: 0 0 0 0.1rem rgba(232, 17, 35, 0.2);
+  border-color: #e81123;
+}
+
+.has-error .form-checkbox input:indeterminate + .form-icon, .form-checkbox.is-error input:indeterminate + .form-icon {
+  background: #e81123;
+  border-color: #e81123;
+}
+
+.form-checkbox input:disabled + .form-icon, .form-checkbox input.disabled + .form-icon {
+  background: #f7f7f7;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.form-checkbox input:checked:disabled + .form-icon, .form-checkbox input:checked.disabled + .form-icon {
+  border: 1px solid #a6a6a6;
+}
+.form-checkbox input:checked:disabled + .form-icon::before, .form-checkbox input:checked.disabled + .form-icon::before {
+  border-color: #a6a6a6;
+}

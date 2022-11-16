@@ -1,0 +1,73 @@
+/* 
+  Select.scss 
+  - Includes all default styles for the Select component
+*/
+.bf-ui-form-select {
+  appearance: none;
+  -webkit-appearance: none !important;
+  border: 0.05rem solid #a6a6a6;
+  border-radius: 0.1rem;
+  color: inherit;
+  font-size: 0.6rem;
+  height: 1.8rem;
+  line-height: 1.2rem;
+  outline: none;
+  margin-top: 0.4rem;
+  padding: 0 0.4rem;
+  vertical-align: middle;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 0.6rem;
+  background: #FFF url("data:image/svg+xml;charset=utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTEyMS4zLDM0LjZjLTEuNi0xLjYtNC4yLTEuNi01LjgsMGwtNTEsNTEuMS01MS4xLTUxLjFjLTEuNi0xLjYtNC4yLTEuNi01LjgsMC0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTMuOSw1My45YzAuOCwwLjggMS44LDEuMiAyLjksMS4yIDEsMCAyLjEtMC40IDIuOS0xLjJsNTMuOS01My45YzEuNy0xLjYgMS43LTQuMiAwLjEtNS44eiIgZmlsbD0iIzAwMDAwMCIvPgogIDwvZz4KPC9zdmc+Cg==") no-repeat right 0.35rem center/0.4rem 0.5rem !important;
+}
+.bf-ui-form-select:hover {
+  border-color: #333333;
+}
+.bf-ui-form-select:focus {
+  border-color: #0078d4;
+}
+.bf-ui-form-select::-ms-expand {
+  display: none;
+}
+.bf-ui-form-select.select-sm {
+  font-size: 11px;
+  height: 1.4rem;
+  padding: 0.05rem 1.1rem 0.05rem 0.3rem;
+}
+.bf-ui-form-select.select-lg {
+  font-size: 16px;
+  height: 2rem;
+  padding: 0.35rem 1.4rem 0.35rem 0.6rem;
+}
+.bf-ui-form-select[size], .bf-ui-form-select[multiple] {
+  height: auto;
+  padding: 0.25rem 0.4rem;
+}
+.bf-ui-form-select[size] option, .bf-ui-form-select[multiple] option {
+  padding: 0.1rem 0.2rem;
+}
+
+.has-success .bf-ui-form-select, .bf-ui-form-select.is-success {
+  background: #fdfef2;
+  border-color: #bad80a;
+}
+.has-success .bf-ui-form-select:focus, .bf-ui-form-select.is-success:focus {
+  box-shadow: 0 0 0 0.1rem rgba(186, 216, 10, 0.2);
+}
+.has-error .bf-ui-form-select, .bf-ui-form-select.is-error {
+  background: white;
+  border-color: #e81123;
+  color: #e81123;
+}
+.has-error .bf-ui-form-select:focus, .bf-ui-form-select.is-error:focus {
+  box-shadow: 0 0 0 0.1rem rgba(232, 17, 35, 0.2);
+}
+
+.bf-ui-form-select:disabled, .bf-ui-form-select.disabled {
+  background-color: #f7f7f7 !important;
+  cursor: not-allowed;
+  opacity: 0.5;
+}

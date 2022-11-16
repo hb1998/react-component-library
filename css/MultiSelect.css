@@ -1,0 +1,276 @@
+/* 
+  MultiSelect.scss 
+  - Includes all default styles for the MultiSelectt component
+*/
+/* 
+  menu.scss 
+  - Includes all default styles for rendering menus
+*/
+.menu {
+  box-shadow: 0 0.05rem 0.2rem rgba(33, 33, 33, 0.3);
+  background: #f4f4f4;
+  border-radius: 0.1rem;
+  list-style: none;
+  margin: 0;
+  min-width: 180px;
+  padding: 0.4rem;
+  transform: translateY(0.2rem);
+  z-index: 300;
+}
+.menu.menu-nav {
+  background: transparent;
+  box-shadow: none;
+}
+.menu .menu-item {
+  margin-top: 0;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+}
+.menu .menu-item > a {
+  border-radius: 0.1rem;
+  color: inherit;
+  display: block;
+  margin: 0 -0.4rem;
+  padding: 0.2rem 0.4rem;
+  text-decoration: none;
+}
+.menu .menu-item > a:focus, .menu .menu-item > a:hover {
+  background: #0078d4;
+  color: #f2c811;
+}
+.menu .menu-item > a:active, .menu .menu-item > a.active {
+  background: #0078d4;
+  color: #f2c811;
+}
+.menu .menu-item .form-checkbox,
+.menu .menu-item .form-radio,
+.menu .menu-item .form-switch {
+  margin: 0.1rem 0;
+}
+.menu .menu-item + .menu-item {
+  margin-top: 0.2rem;
+}
+.menu .menu-item > button {
+  font-size: 13px;
+  display: flex;
+  width: 100%;
+  padding: 6px 12px;
+  justify-content: flex-start;
+  background-color: transparent;
+  text-align: left;
+  border: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu-item > button:hover {
+  color: #333;
+  background: #f4f4f4;
+  outline: 0;
+}
+.menu .menu-item > button:focus {
+  outline: 0;
+}
+.menu .menu-item > button.active, .menu .menu-item > button:active {
+  background: #d4ecff;
+}
+.menu .menu-item > button .label-text {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.menu .menu-item > button .label-desc {
+  font-size: 11px;
+  color: #989898;
+  line-height: 16px;
+}
+.menu .menu-badge {
+  float: right;
+  padding: 0.2rem 0;
+}
+.menu .menu-badge .btn {
+  margin-top: -0.1rem;
+}
+
+.bf-ui-form-multi-select-container {
+  display: flex;
+  flex-direction: column;
+}
+.bf-ui-form-multi-select-container .chip {
+  background-color: #f4f4f4;
+  color: #212121;
+  border-radius: 0;
+  display: inline-block;
+  padding: 0px 8px 0 8px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+  z-index: 1;
+  margin-bottom: 3px;
+}
+.bf-ui-form-multi-select-container .chip:hover {
+  background-color: #dbdbdb;
+  cursor: pointer;
+}
+.bf-ui-form-multi-select-container .chip button.btn-close {
+  background: none;
+  border: 0;
+  padding: 0;
+  line-height: 10px;
+  padding-left: 8px;
+}
+.bf-ui-form-multi-select-container .chip button.btn-close:hover {
+  cursor: pointer;
+}
+.bf-ui-form-multi-select-container .chip button.btn-close:hover, .bf-ui-form-multi-select-container .chip button.btn-close:active, .bf-ui-form-multi-select-container .chip button.btn-close:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.bf-ui-form-multi-select-container .chip i.icon {
+  line-height: 10px;
+}
+.bf-ui-form-multi-select-container .form-multi-select {
+  position: relative;
+  appearance: none;
+  border: 0.05rem solid #a6a6a6;
+  border-radius: 0.1rem;
+  color: inherit;
+  font-size: 0.6rem;
+  height: 1.8rem;
+  line-height: 1.2rem;
+  outline: none;
+  margin-top: 0.4rem;
+  vertical-align: middle;
+  width: 100%;
+  background: transparent;
+}
+.bf-ui-form-multi-select-container .form-multi-select:hover {
+  border-color: #333333;
+}
+.bf-ui-form-multi-select-container .form-multi-select:focus {
+  border-color: #0078d4;
+}
+.bf-ui-form-multi-select-container .form-multi-select::-ms-expand {
+  display: none;
+}
+.bf-ui-form-multi-select-container .form-multi-select.select-sm {
+  font-size: 11px;
+  height: 1.4rem;
+  padding: 0.05rem 1.1rem 0.05rem 0.3rem;
+}
+.bf-ui-form-multi-select-container .form-multi-select.select-lg {
+  font-size: 16px;
+  height: 2rem;
+  padding: 0.35rem 1.4rem 0.35rem 0.6rem;
+}
+.bf-ui-form-multi-select-container .form-multi-select[size], .bf-ui-form-multi-select-container .form-multi-select[multiple] {
+  height: auto;
+  padding: 0;
+}
+.bf-ui-form-multi-select-container .form-multi-select[size] option, .bf-ui-form-multi-select-container .form-multi-select[multiple] option {
+  padding: 0.1rem 0.2rem;
+}
+.bf-ui-form-multi-select-container .form-multi-select:not([multiple]):not([size]) {
+  background: transparent;
+  padding: 0;
+  min-height: 1.8rem;
+}
+.has-success .bf-ui-form-multi-select-container .form-multi-select, .bf-ui-form-multi-select-container .form-multi-select.is-success {
+  background: #fdfef2;
+  border-color: #bad80a;
+}
+.has-success .bf-ui-form-multi-select-container .form-multi-select:focus, .bf-ui-form-multi-select-container .form-multi-select.is-success:focus {
+  box-shadow: 0 0 0 0.1rem rgba(186, 216, 10, 0.2);
+}
+.has-error .bf-ui-form-multi-select-container .form-multi-select, .bf-ui-form-multi-select-container .form-multi-select.is-error {
+  background: white;
+  border-color: #e81123;
+  color: #e81123;
+}
+.has-error .bf-ui-form-multi-select-container .form-multi-select:focus, .bf-ui-form-multi-select-container .form-multi-select.is-error:focus {
+  box-shadow: 0 0 0 0.1rem rgba(232, 17, 35, 0.2);
+}
+.bf-ui-form-multi-select-container .form-multi-select:disabled, .bf-ui-form-multi-select-container .form-multi-select.disabled {
+  background-color: #f7f7f7 !important;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu {
+  border: 1px solid #e6e6e6;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 2px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #ffffff;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu.hidden {
+  visibility: hidden;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu.visible {
+  visibility: visible;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu.top {
+  bottom: 115%;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu .menu-item {
+  display: flex;
+  align-items: center;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu .menu-item.menu-item-selected > button {
+  background: #dff1ff;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu .menu-item.menu-item-selected > button::after {
+  content: "\e73e";
+  font-family: "FabricMDL2Icons";
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  color: #006dc0;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu-search {
+  overflow: hidden;
+  margin: 0;
+  height: auto;
+}
+.bf-ui-form-multi-select-container .form-multi-select .multiselect-input {
+  border: none;
+}
+.bf-ui-form-multi-select-container .form-multi-select ul {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  background-color: #ffffff;
+  border: none;
+  position: initial;
+  height: auto;
+  max-height: 180px;
+  margin: 0;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu-search-input {
+  width: 100%;
+}
+.bf-ui-form-multi-select-container .form-multi-select .menu-search-input .form-input {
+  border: none;
+  margin-top: unset;
+}
+.bf-ui-form-multi-select-container .selected .bf-ui-draggable-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.bf-ui-form-multi-select-container .form-multi-select-disabled-info {
+  padding: 5px 0 5px 5px;
+}

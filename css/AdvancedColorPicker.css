@@ -1,0 +1,243 @@
+/* 
+  Checkbox.scss 
+  - Includes all default styles for the Checkbox component
+*/
+.bf-editor-colorpicker-wrapper .swatch {
+  height: 22px;
+  width: 22px;
+}
+
+.bf-editor-colorpicker-wrapper .swatch-mini {
+  height: 18px;
+  width: 18px;
+}
+
+.bf-ui-colopicker-modal,
+.bf-ui-colopicker-custom-modal {
+  z-index: 99;
+  margin-top: 10px;
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
+  box-shadow: 0 3px 6px rgba(119, 91, 91, 0.3);
+  padding: 10px;
+}
+
+.alignCenter .bf-ui-colopicker-modal,
+.alignCenter .bf-ui-colopicker-custom-modal {
+  position: fixed;
+  margin-left: -140px;
+  left: 50%;
+  transform: translateY(-50%);
+}
+.alignCenter .bf-ui-colopicker-modal {
+  top: 50%;
+}
+.alignCenter .bf-ui-colopicker-custom-modal {
+  top: 48%;
+}
+
+.bf-ui-colopicker-custom-modal {
+  padding: 0px;
+  top: 27%;
+}
+
+.bf-ui-colorpicker-label {
+  color: #252423;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.bf-ui-colopicker-custom-picker-div {
+  background-color: #f3f2f1;
+  text-align: center;
+  font-family: "Segoe UI", "Helvetica", helvetica, arial, sans-serif;
+}
+
+.bf-ui-colorpicker-button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.bf-ui-colorpicker-wrapper .sketch-picker {
+  box-shadow: none !important;
+  padding: unset !important;
+}
+
+.bf-ui-colorpicker-wrapper .sketch-picker .flexbox-fix:last-child {
+  display: none !important;
+}
+
+.bf-ui-colorpicker-wrapper {
+  box-shadow: 0 2px 5px 3px #ddd;
+  padding: 6px;
+  background: #ffffff;
+}
+
+.bf-ui-colorpicker-button-group-save {
+  color: #ffffff !important;
+  background-color: #0078d4 !important;
+}
+
+.bf-ui-colorpicker-button-group-cancel {
+  color: #000000 !important;
+  background-color: #f4f4f4 !important;
+}
+
+.bf-ui-colorpicker-button-group-cancel,
+.bf-ui-colorpicker-button-group-save {
+  margin-left: 6px;
+  width: 68px !important;
+  height: 27px !important;
+  font-size: 12px !important;
+  width: 68px !important;
+  height: 26px !important;
+  line-height: unset;
+  padding: 0px !important;
+  border: 1px solid #dddddd !important;
+  min-width: unset !important;
+}
+
+.bf-editor-colorpicker-wrapper {
+  font-family: "Segoe UI", "Helvetica", helvetica, arial, sans-serif;
+}
+
+.bf-ui-colopicker-recent-colors,
+.bf-ui-colopicker-modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.bf-ui-colorpicker-smokeScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #dddddd;
+  opacity: 0.5;
+  z-index: 9;
+}
+
+.bf-ui-colopicker-Palette-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.bf-ui-colopicker-Palette-reset:hover,
+.bf-ui-colopicker-Palette-noFill:hover {
+  background-color: #dddddd;
+}
+
+.bf-ui-colorpicker-reset-label {
+  margin-left: 5px;
+}
+
+.bf-ui-colopicker-custom-picker-div,
+.bf-ui-colopicker-Palette-reset {
+  padding-right: 10px;
+}
+
+.bf-ui-colopicker-Palette-reset {
+  border-right: 0.5px solid #cccccc;
+  padding-right: 8px;
+}
+
+.bf-rx-colorpicker-svg {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.bf-editor-colorpicker-icon-div {
+  display: flex;
+  align-items: center;
+}
+
+.hue-horizontal div div,
+.flexbox-fix > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(3) > div > div {
+  margin-top: -1px !important;
+  height: 12px !important;
+  width: 12px !important;
+  position: fixed;
+  border-radius: 50% !important;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.bf-ui-colopicker-Palette-noFill {
+  display: flex;
+  align-items: center;
+}
+
+.bf-ui-colopicker-frequent-colors {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  border-top: 1px solid #cdcdcd;
+  margin-top: 5px;
+}
+
+.bf-ui-colopicker-frequent-colors-palette {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bf-ui-colopicker-frequent-colors-palette .custom-btn:hover {
+  background-color: #dddddd;
+}
+
+.bf-ui-colopicker-frequent-colors-palette .custom-btn {
+  width: 15px;
+  height: 15px;
+  line-height: 10px;
+  margin-left: 5px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.bf-ui-colopicker-frequent-colors-palette .copy-colors {
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 1px;
+}
+
+.bf-ui-colopicker-frequent-colors-palette .add-colors {
+  border: 1px solid #dddddd;
+  color: #000000;
+}
+
+.bf-ui-colopicker-frequent-title {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 8px;
+}
+
+.bf-ui-colopicker-frequent-title .frequent-title {
+  width: 100%;
+  font-weight: 500;
+}
+
+.bf-ui-colopicker-frequent-title .bf-ui-colopicker-Palette-reset {
+  display: flex;
+  border: none;
+}
+
+.bf-ui-colopicker-frequent-title i {
+  line-height: 20px;
+  padding-left: 8px;
+}
+
+.bf-ui-colopicker-frequent-colors-palette .bf-rx-colorpicker-svg {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.colorpicker-popOver {
+  z-index: 99999 !important;
+}

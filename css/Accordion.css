@@ -1,0 +1,50 @@
+/* CSS for Accordion Component (based on Spectre.css) */
+.accordion {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.accordion .accordion-item {
+  margin-bottom: 16px;
+}
+
+.accordion .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  padding: 0 8px;
+  background-color: #f7f7f7;
+}
+.accordion .accordion-header:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+.accordion .accordion-header h3 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+  padding-left: 12px;
+  margin: 0;
+}
+.accordion .accordion-header .accordion-action .btn {
+  min-width: auto;
+  background: none;
+  padding: 0 8px;
+}
+.accordion .accordion-header .accordion-action .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.accordion .accordion-header .accordion-action .btn:hover {
+  opacity: 0.8;
+}
+
+.accordion .accordion-body {
+  padding: 0 8px;
+}
+
+.accordion-title {
+  border-width: 0px;
+  margin: 10px;
+}

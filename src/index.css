@@ -21,3 +21,10 @@
   }
 }
 
+:root{
+  --color:#333333;
+  --shade:#a6a6a6;
+  --border-red-color:#e81123;
+  --box-shadow-color:rgba(232, 17, 35, 0.2);
+  --background-color:white;
+}

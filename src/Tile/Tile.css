@@ -1,0 +1,83 @@
+/* 
+  Tile.scss 
+  - Includes all default styles for the tile component
+*/
+
+
+.tile {
+    background-color: var(--gray-disabled);
+    margin: 10px 0;
+    padding: 1rem;
+  }
+  .tile:hover {
+    background-color: #e7e7e7;
+    cursor: pointer;
+  }
+  .tile:focus, .tile:active {
+    background-color: var(--gray-disabled);
+    outline: 0;
+  }
+  .tile .flex-container {
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    min-width: 100%;
+  }
+  .tile .flex-container .text-container {
+    flex-grow: 1;
+    text-align: left;
+  }
+  .tile .tile-title {
+    margin: 0;
+    margin-bottom: 5px;
+    line-height: 100%;
+    font-weight: 600;
+    color: var(--body-font-color);
+    font-size: var(--font-size);
+  }
+  .tile .tile-desc {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--body-font-color);
+  }
+  .tile .tile-icon {
+    margin-right: 12px;
+    color: var(--body-font-color);
+  }
+  .tile[disabled], .tile:disabled, .tile.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .tile[disabled]:hover, .tile:disabled:hover, .tile.disabled:hover {
+    cursor: default;
+  }
+  .tile.tile-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+  }
+  .tile.tile-primary:focus, .tile.tile-primary:hover {
+    background: var(--primary-color-dark);
+  }
+  .tile.tile-secondary {
+    background-color: var(--secondary-color);
+  }
+  .tile.tile-secondary:focus, .tile.tile-secondary:hover {
+    background: var(--secondary-color-dark);
+  }
+  .tile.tile-secondary .tile-title, .tile.tile-secondary .tile-desc, .tile.tile-secondary .tile-icon {
+    color: var(--gray-disabled);
+  }
+  .tile.tile-disabled {
+    background-color: var(--gray-disabled);
+    color: var(--gray-disabled-text);
+  }
+  .tile.tile-disabled:focus, .tile.tile-disabled:hover {
+    cursor: default;
+    background-color: var(--gray-disabled);
+  }
+  .tile.tile-disabled .tile-title, .tile.tile-disabled .tile-desc, .tile.tile-disabled .tile-icon {
+    color: var(--gray-disabled-text);
+  }

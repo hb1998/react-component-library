@@ -1,7 +1,7 @@
 .btn {
     position: relative;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--light-color);
+    background-color: var(--bg-color);
     border: none;
     color: var(--body-font-color);
     font-size: var(--font-size);
@@ -27,7 +27,7 @@
     white-space: nowrap;
   }
   .btn:focus, .btn:hover {
-    background: var(--light-color-1);
+    background: var(--primary-hover);
     text-decoration: none;
   }
   .btn[disabled], .btn:disabled, .btn.disabled {
@@ -37,7 +37,7 @@
   }
   .btn.btn-primary {
     background-color: var(--primary-color);
-    color: var(--dark-color);
+    color: var(--black);
     margin-left:  var(--border-width);
   }
   .btn.btn-primary:focus, .btn.btn-primary:hover {
@@ -45,70 +45,70 @@
   }
   .btn.btn-secondary {
     background-color: var(--secondary-color);
-    color: var(--light-color);
+    color: var(--bg-color);
   }
   .btn.btn-secondary:focus, .btn.btn-secondary:hover {
     background: var(--secondary-color-dark);
   }
   .btn.btn-disabled {
-    background-color: var(--gray-disabled);
+    background-color: var(--bg-color);
     color: var(--gray-disabled-text);
   }
   .btn.btn-disabled:focus, .btn.btn-disabled:hover {
     cursor: default;
-    background: var(--disabled-hover-color);
+    background: var(--bg-color);
   }
   .btn.btn-action {
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--black);
+    color: var(--bg-color);
   }
   .btn.btn-action:focus, .btn.btn-action:hover {
-    background: var(--btn-action-color);
+    background: var(--gray);
   }
   .btn.btn-success {
     background: var(--success-color);
-    border-color: var(--success-border-color);
-    color: var(--gray-disabled);
+    border-color: var(--success-color-dark);
+    color: var(--bg-color);
   }
   .btn.btn-success:focus {
     box-shadow: 0 0 0 0.1rem rgba(186, 216, 10, 0.2);
   }
   .btn.btn-success:focus, .btn.btn-success:hover {
-    background: var(--success-border-color);
-    border-color:var(--success-hoverborder-color);
-    color: var(--gray-disabled);
+    background: var(--success-hover-color);
+    border-color:var(--success-border-color);
+    color: var(--bg-color);
   }
   .btn.btn-success:active, .btn.btn-success.active {
     background: var(--success-active-color);
-    border-color: var(--success-activehover-color);
-    color: var(--gray-disabled);
+    border-color: var(--success-active-border-color);
+    color: var(--bg-color);
   }
   .btn.btn-success.loading::after {
-    border-bottom-color: var(--gray-disabled);
-    border-left-color:var(--gray-disabled);
+    border-bottom-color: var(--bg-color);
+    border-left-color:var(--bg-color);
   }
   .btn.btn-error {
     background: var(--error-color);
-    border-color: var(--error-border-color);
-    color:var(--gray-disabled);
+    border-color: var(--error-color-dark);
+    color:var(--bg-color);
   }
   .btn.btn-error:focus {
     box-shadow: 0 0 0 0.1rem rgba(232, 17, 35, 0.2);
   }
   .btn.btn-error:focus, .btn.btn-error:hover {
-    background: var(--error-hover-bg);
-    border-color: var(--error-hover-border);
-    color:var(--gray-disabled);
+    background: var(--error-hover-color);
+    border-color: var(--error-border-color);
+    color:var(--bg-color);
   }
   .btn.btn-error:active, .btn.btn-error.active {
-    background: var(error-active-bg) ;
-    border-color:var(error-active-border) ;
-    color:var(--gray-disabled);
+    background: var(--error-active-color) ;
+    border-color:var(--error-active-border-color) ;
+    color:var(--bg-color);
   }
 
   .btn.btn-error.loading::after {
-    border-bottom-color:var(--gray-disabled);
-    border-left-color:var(--gray-disabled);
+    border-bottom-color:var(--bg-color);
+    border-left-color:var(--bg-color);
   }
   .btn.btn-link {
     background: transparent;
@@ -116,7 +116,7 @@
     color: var(--secondary-color);
   }
   .btn.btn-link:focus, .btn.btn-link:hover, .btn.btn-link:active, .btn.btn-link.active {
-    color:var(btn-link-click) ;
+    color:var(--secondary-color) ;
   }
 
   /* Button Size */

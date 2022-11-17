@@ -3,9 +3,9 @@ import { IButtonProps } from "./Button.types";
 import "./Button.css";
 import classnames from "classnames";
 
-function Button(props: IButtonProps) {
+const Button:React.FC<IButtonProps> = (props: IButtonProps) =>{
   const { disabled } = props;
-  const onClickAction = (
+  const onClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     if (disabled) {
@@ -42,13 +42,11 @@ function Button(props: IButtonProps) {
     <button
       title={title || ""}
       className={resolvedClassName}
-      onClick={onClickAction}
+      onClick={onClick}
     >
       {children}
     </button>
   );
 }
-
-
 
 export default Button;

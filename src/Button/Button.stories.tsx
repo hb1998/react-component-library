@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from '../Layout/Box';
 import  Button  from '../Button/Button';
-import '../../src/Base.css';
+import '../Base.css'
 
 export const ButtonColors = (props) => {
   return (

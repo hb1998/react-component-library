@@ -1,0 +1,126 @@
+/* 
+  Switch.scss 
+  - Includes all default styles for the Switch component
+*/
+.form-switch {
+  font-size: var(--unit-3);
+  display: block;
+  line-height: var(--unit-6);
+  margin: var(--unit-1) 0;
+  min-height: var(--unit-6);
+  padding: var(--unit-h) var(--unit-2) var(--unit-h) var(--unit-6);
+  position: relative;
+}
+.form-switch input {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+.form-switch input:focus + .form-icon {
+  border-color: var(--gray-disabled-text);
+}
+.form-switch input:checked + .form-icon {
+  background:var(--bg-color);
+  border-color: var(--secondary-color);
+  box-shadow: none;
+}
+.form-switch .form-icon {
+  border: var(--unit-o) solid var(--primary-border-color);
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.form-switch span {
+  padding-left: var(--unit-4);
+}
+
+.form-switch .form-icon {
+  background:var(--bg-color);
+  background-clip: padding-box;
+  border-radius: 0.45rem;
+  height: calc(var(--unit-4)+0.1);
+  left: 0;
+  width: var(--unit-8);
+  border-color:var(--primary-border-color) ;
+  top: 0.25rem;
+}
+.form-switch .form-icon::before {
+  background: var(--primary-border-color);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: var( --unit-3);
+  left: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s, left 0.2s;
+  width: 0.6rem;
+}
+.form-switch input:checked + .form-icon {
+  background-color: var( --secondary-color);
+  border: none;
+}
+.form-switch input:checked + .form-icon::before {
+  background-color: var( --bg-color);
+  left: 16px;
+}
+.form-switch input:active + .form-icon::before {
+  background-color: var( --secondary-color);
+}
+
+.has-error .form-switch .form-icon, .form-switch.is-error .form-icon {
+  border-color:var( --error-color);
+}
+.has-error .form-switch .form-icon::before, .form-switch.is-error .form-icon::before {
+  background-color:  var( --error-color);
+}
+.has-error .form-switch input:checked + .form-icon, .form-switch.is-error input:checked + .form-icon {
+  background: var( --error-color);
+  border-color:var( --error-color);
+}
+.has-error .form-switch input:focus + .form-icon, .form-switch.is-error input:focus + .form-icon {
+  box-shadow: 0 0 0 var(--unit-h) var( --saffron-red);
+  border-color: var( --error-color);
+}
+
+.form-switch input:disabled + .form-icon, .form-switch input.disabled + .form-icon {
+  opacity: 0.5;
+}
+.form-switch input:checked:disabled + .form-icon, .form-switch input:checked.disabled + .form-icon {
+  opacity: 0.5;
+}
+
+.form-switch.mini .form-icon {
+  height: var(--unit-h);
+  width: 1.3rem;
+  top: calc(var(var( --unit-3)+0.1rem));
+}
+.form-switch.mini .form-icon::before {
+  height: var( --unit-3);
+  width: var( --unit-3);
+  left: -1px;
+  background-color:var(--bg-color);
+  border: 2px var(--primary-border-color) solid;
+}
+.form-switch.mini input:active + .form-icon::before {
+  background-color: var(--primary-border-color);
+}
+.form-switch.mini input:focus + .form-icon {
+  border-color:var(--primary-border-color);
+}
+.form-switch.mini input:checked + .form-icon::before {
+  left: 14px;
+  background-color: var( --link-color-ligh);
+  border: none;
+}
+.form-switch.mini.has-error .form-switch.mini .form-icon::before, .form-switch.mini.is-error .form-icon::before {
+  border-color:var( --error-color);
+}
+.form-switch.mini.has-error .form-switch.mini input:checked + .form-icon::before, .form-switch.mini.is-error input:checked + .form-icon::before {
+  background: var( --error-color);
+}

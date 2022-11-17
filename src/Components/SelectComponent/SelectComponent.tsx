@@ -3,15 +3,12 @@ import classnames from "classnames";
 import { ISelectProps } from "./SelectComponent.types";
 import "./SelectComponent.css";
 
-export const Select = (props: ISelectProps) => {
-  const onEventChange = (e: { target: { value: any; }; }) => {
-    props.onChange(e.target.value);
-    return;
+export const Select: React.FC<ISelectProps> = (props: ISelectProps) => {
+  const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    props.onChange(event.target.value);
   };
-  const onEventBlur = (e:any) => {
-    props.onBlur(e.target.value);
-    props=e.target.value;
-    return;
+  const onBlur = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    props.onBlur?.(e.target.value);
   };
 
   const {
@@ -61,8 +58,8 @@ export const Select = (props: ISelectProps) => {
       disabled={disabled}
       defaultValue={defaultValue}
       value={value}
-      onChange={onEventChange}
-      onBlur={onEventBlur}
+      onChange={onChange}
+      onBlur={onBlur}
       key={value}
     >
       {placeholder ? (

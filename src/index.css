@@ -2,7 +2,6 @@
   /* Add your CSS variables here */
   --background: #fff;
   --font-color: #494949;
-
   --harvey-black: #131111;
   --harvey-white: #e0e0e0;
   --harvey-red: #ff2323;
@@ -21,8 +20,148 @@
   }
 }
 
+@use "sass:math";
 :root {
-  --light-color: #f8f8f8;
-  --error-color:#e81123;
-  --box-border-color:#a6a6a6;
+  /* // Core variables */
+  --version: "1.0.0";
+
+  /* Core features */
+  --rtl: false;
+
+  /* // Background colors */
+  --bg-color: #f4f4f4;
+
+  /*  Accent colors */
+  --primary-color: #f2c811;
+  --primary-color-dark: #ddb60c;
+  --primary-hover: #dbdbdb;
+  --primary-border-color: #333333;
+
+  /* Secondary accent colors */
+  --secondary-color: #0078d4;
+  --secondary-color-dark: #006abb;
+
+  /* // Base colors */
+  --black-color: #212121;
+  --grey-color: #2e2e2e;
+  --gray-disabled-text: #a6a6a6;
+
+  /*  Control colors */
+  --success-color: #bad80a;
+  --success-color-dark: #adc909;
+  --error-color: #e81123;
+  --error-color-dark: #cf0f1f;
+
+  /* Other colors */
+  --code-color: #d73e48;
+  --saffron-red: rgba(232, 17, 35, 0.2);
+  --highbg-color: #ffe9b3;
+  --body-font-color: #333333;
+  --link-color-dark: #005ba1;
+  --link-color-light: #0078d4;
+
+  /* action Color Error button */
+  --error-hover-color: #de1022;
+  --error-border-color: #d00f1f;
+  --error-active-color: #c70f1e;
+  --error-active-border-color: #b80e1c;
+
+  /* action Color Success button */
+  --success-hover-color: #b2ce0a;
+  --success-border-color: #a5c009;
+  --success-active-color: #9db608;
+  --success-active-border-color: #90a708;
+
+  /* box shadow color */
+  --greeney-grey: rgba(186, 216, 10, 0.2);
+
+  /* // Fonts */
+  --base-font-family: "Segoe UI", "Helvetica";
+  --mono-font-family: "Segoe UI Mono", "Helvetica", "Roboto Mono", Menlo,
+    Courier, monospace;
+  --fallback-font-family: helvetica, arial, sans-serif;
+  --body-font-family: var(--base-font-family), var(--fallback-font-family);
+
+  /* // Unit sizes */
+  --unit-o: 0.05rem;
+  --unit-h: 0.1rem;
+  --unit-1: 0.2rem;
+  --unit-2: 0.4rem;
+  --unit-3: 0.6rem;
+  --unit-4: 0.8rem;
+  --unit-5: 1rem;
+  --unit-6: 1.2rem;
+  --unit-7: 1.4rem;
+  --unit-8: 1.6rem;
+  --unit-9: 1.8rem;
+  --unit-10: 2rem;
+  --unit-12: 2.4rem;
+  --unit-16: 3.2rem;
+
+  /* // Font sizes */
+  --html-font-size: 20px;
+  --html-line-height: 1.5px;
+  --font-size: 13px;
+  --font-size-m: 13px;
+  --font-size-sm: 11px;
+  --font-size-lg: 16px;
+  --line-height: 1.2rem;
+
+  /* // Sizes */
+  --layout-spacing: var(--unit-2);
+  --layout-spacing-sm: var(--unit-1);
+  --layout-spacing-lg: var(--unit-4);
+  --border-radius: var(--unit-h);
+  --border-width: var(--unit-o);
+  --border-width-lg: var(--unit-h);
+  --control-size: var(--unit-9);
+  --control-size-sm: var(--unit-7);
+  --control-size-lg: var(--unit-10);
+  --control-padding-x: var(--unit-2);
+  --control-padding-x-sm: var(--unit-2) * 0.75;
+  --control-padding-x-lg: var(--unit-2) * 1.5;
+  --control-padding-y: math.div(var(--control-size) - var(--line-height), 2) -
+    var(--border-width);
+  --control-padding-y-sm: math.div(
+      var(--control-size-sm) - var(--line-height),
+      2
+    ) - var(--border-width);
+  --control-padding-y-lg: math.div(
+      var(--control-size-lg) - var(--line-height),
+      2
+    ) - var(--border-width);
+  --control-icon-size: 0.8rem;
+
+  --control-width-xs: 180px;
+  --control-width-sm: 320px;
+  --control-width-md: 640px;
+  --control-width-lg: 960px;
+  --control-width-xl: 1280px;
+
+  /* // Responsive breakpoints */
+  --size-xs: 480px;
+  --size-sm: 600px;
+  --size-md: 840px;
+  --size-lg: 960px;
+  --size-xl: 1280px;
+  --size-2x: 1440px;
+
+  --responsive-breakpoint: --size-xs;
+
+  /* // Z-index */
+  --zindex-0: 1;
+  --zindex-1: 100;
+  --zindex-2: 200;
+  --zindex-3: 300;
+  --zindex-4: 400;
+
+  --control-padding-y: calc(
+    (var(--control-size) - var(--line-height) / 2) - var(--border-width)
+  );
+  --control-padding-y-sm: calc(
+    (var(--control-size-sm) - var(--line-height) / 2) - var(--border-width)
+  );
+  --control-padding-y-lg: calc(
+    (var(--control-size-lg) - var(--line-height) / 2) - var(--border-width)
+  );
 }

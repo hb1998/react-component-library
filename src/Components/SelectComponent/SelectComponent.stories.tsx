@@ -38,9 +38,7 @@ const SelectContainer = (props) => {
           <Select
             defaultValue={"second-item"}
             options={options}
-            placeholder="This is a default select" onBlur={function (value: any): unknown {
-              throw new Error("Function not implemented.");
-            } } onChange={()=>valueFromSelect}          />
+            placeholder="This is a default select" onBlur={()=>valueFromSelect} onChange={()=>valueFromSelect}          />
         </Box>
       </Box>
       <Box className="columns pb-16">
@@ -48,8 +46,7 @@ const SelectContainer = (props) => {
           <Select
             options={options}
             placeholder="This is a default select (with value)"
-            value="first-item" onBlur={function (value: any): unknown {
-              throw new Error("Function not implemented.")}} onChange={()=>valueFromSelect}          />
+            value="first-item" onChange={()=>valueFromSelect}          />
         </Box>
       </Box>
       <Box className="columns pb-16">
@@ -58,9 +55,7 @@ const SelectContainer = (props) => {
             options={options}
             placeholder="This has an error"
             error={true}
-            value="first-item" onBlur={function (value: any): unknown {
-              throw new Error("Function not implemented.");
-            } } onChange={()=>valueFromSelect}          />
+            value="first-item" onChange={()=>valueFromSelect}          />
         </Box>
       </Box>
       <Box className="columns pb-16">
@@ -69,9 +64,7 @@ const SelectContainer = (props) => {
             options={options}
             placeholder="This is a disabled select"
             disabled={true}
-            value="first-item" onBlur={function (value: any): unknown {
-              throw new Error("Function not implemented.");
-            } } onChange={()=>valueFromSelect}          />
+            value="first-item" onChange={()=>valueFromSelect}          />
         </Box>
       </Box>
     </Box>

@@ -1,9 +1,6 @@
-
 export interface ISelectProps {
-  onBlur(value: any): unknown;
-  onChange: (data:React.MouseEvent<HTMLButtonElement, MouseEvent>) => void ;
-  // onChange?: (data:string|number|undefined)=>void;
-  // onChange: Function;
+  onBlur?: (value:string)=>void
+  onChange:(value:string)=>void
   icon?: string;
   value?: any;
   showTooltip?: boolean;
@@ -13,6 +10,5 @@ export interface ISelectProps {
   placeholder?: string;
   error?: boolean;
   defaultValue?: any;
-  // onChange: Function;
   className?: string;
 }

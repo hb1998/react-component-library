@@ -2,10 +2,12 @@
   Checkbox.scss 
   - Includes all default styles for the Checkbox component
 */
+
+/* var(--font-size) */
 .form-checkbox {
-  font-size: 13px;
+  font-size: var(--font-size);
   display: block;
-  line-height: 1.2rem;
+  line-height: var(--line-height);
   margin: 0.2rem 0;
   min-height: 1.2rem;
   padding: 0.1rem 0.4rem 0.1rem 1.2rem;
@@ -22,17 +24,17 @@
 }
 
 .form-checkbox input:focus+.form-icon {
-  border-color: #a6a6a6;
+  border-color: var(--gray-disabled-text);
 }
 
 .form-checkbox input:checked+.form-icon {
-  background: #f4f4f4;
-  border-color: #0078d4;
+  background: var(--bg-color);
+  border-color: var(--secondary-color);
   box-shadow: none;
 }
 
 .form-checkbox .form-icon {
-  border: 0.05rem solid #adadad;
+  border: var(--border-width) solid var(--gray-disabled-text);
   cursor: pointer;
   display: inline-block;
   position: absolute;
@@ -40,36 +42,36 @@
 }
 
 .form-checkbox .form-icon {
-  background: #f4f4f4;
-  height: 0.8rem;
+  background: var(--bg-color);
+  height: var(--control-icon-size);
   left: 0;
   top: 0.3rem;
-  width: 0.8rem;
+  width: var(--control-icon-size);
 }
 
 .form-checkbox input:active+.form-icon {
-  background: #f7f7f7;
+  background: var(--bg-color);
 }
 
 .form-checkbox .form-icon {
-  border-color: #333333;
+  border-color: var(--body-font-color);
   border-radius: none;
 }
 
 .form-checkbox input:checked+.form-icon {
-  background-color: #0078d4;
+  background-color: var(--secondary-color);
 }
 
 .form-checkbox input:checked+.form-icon::before {
   background-clip: padding-box;
-  border: 0.1rem solid #f4f4f4;
+  border: var(--border-width-lg) solid var(--bg-color);
   border-left-width: 0;
   border-top-width: 0;
   content: "";
   height: 9px;
   left: 50%;
-  margin-left: -3px;
-  margin-top: -6px;
+  margin-left: -4px;
+  margin-top: -7px;
   position: absolute;
   top: 50%;
   transform: rotate(45deg);
@@ -78,45 +80,45 @@
 
 .has-error .form-checkbox,
 .form-checkbox.is-error {
-  color: #e81123;
+  color: var(--error-color);
 }
 
 .has-error .form-checkbox .form-icon,
 .form-checkbox.is-error .form-icon {
-  border-color: #e81123;
+  border-color: var(--error-color);
 }
 
 .has-error .form-checkbox input:checked+.form-icon,
 .form-checkbox.is-error input:checked+.form-icon {
-  background: #e81123;
-  border-color: #e81123;
+  background: var(--error-color);
+  border-color: var(--error-color);
 }
 
 .has-error .form-checkbox input:focus+.form-icon,
 .form-checkbox.is-error input:focus+.form-icon {
-  box-shadow: 0 0 0 0.1rem rgba(232, 17, 35, 0.2);
-  border-color: #e81123;
+  box-shadow: 0 0 0 0.1rem var(--saffron-red);
+  border-color: var(--error-color);
 }
 
 .has-error .form-checkbox input:indeterminate+.form-icon,
 .form-checkbox.is-error input:indeterminate+.form-icon {
-  background: #e81123;
-  border-color: #e81123;
+  background: var(--error-color);
+  border-color: var(--error-color);
 }
 
 .form-checkbox input:disabled+.form-icon,
 .form-checkbox input.disabled+.form-icon {
-  background: #f7f7f7;
+  background: var(--bg-color);
   cursor: not-allowed;
   opacity: 0.5;
 }
 
 .form-checkbox input:checked:disabled+.form-icon,
 .form-checkbox input:checked.disabled+.form-icon {
-  border: 1px solid #a6a6a6;
+  border: 1px solid var(--gray-disabled-text);
 }
 
 .form-checkbox input:checked:disabled+.form-icon::before,
 .form-checkbox input:checked.disabled+.form-icon::before {
-  border-color: #a6a6a6;
+  border-color: var(--gray-disabled-text);
 }

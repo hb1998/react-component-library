@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface ICheckboxProps {
   value: boolean;
-  onChange?: (value: boolean) => void;
+  onChange: Function;
   label?: string | JSX.Element;
   disabled?: boolean;
   className?: string;

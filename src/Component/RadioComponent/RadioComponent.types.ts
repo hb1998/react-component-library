@@ -6,6 +6,6 @@ export interface IRadioProps {
   disabled?: boolean;
   value: boolean;
   error?: string | boolean;
-  onChange?: Function;
+  onChange: Function;
   className?: string;
 }

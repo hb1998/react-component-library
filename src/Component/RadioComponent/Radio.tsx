@@ -3,9 +3,10 @@ import { IRadioProps } from "./RadioComponent.types";
 import "./RadioComponent.css";
 import classnames from "classnames";
 
-const Radio = (props: IRadioProps) => {
-  const onChange = (e: { target: { checked: any; }; } ) => {
-    onChange(e.target.checked)
+const Radio:React.FC<IRadioProps> = (props:IRadioProps)=>{
+  const onChange = (event: React.ChangeEvent) => {
+    const target= event.target as
+    HTMLButtonElement;
   }
 
   const { name, label, disabled, value, error, className } = props;

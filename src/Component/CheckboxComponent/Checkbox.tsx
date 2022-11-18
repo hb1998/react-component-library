@@ -3,9 +3,10 @@ import { ICheckboxProps } from "./CheckboxComponent.types";
 import "./CheckboxComponent.css";
 import classnames from "classnames";
 
-const Checkbox = (props: ICheckboxProps) => {
-  const onChange = (e: any) => {
-    onChange(e.target.checked);
+const Checkbox:React.FC<ICheckboxProps> = (props:ICheckboxProps)=>{
+  const onChange = (event: React.ChangeEvent) => {
+    const target= event.target as
+    HTMLButtonElement;
   };
 
   const {

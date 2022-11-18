@@ -2,12 +2,13 @@
   Radio.scss 
   - Includes all default styles for the Radio component
 */
+/* var(--unit-4) */
 .form-radio {
-  font-size: 0.8rem;
+  font-size: var(--unit-3);
   display: block;
-  line-height: 1.2rem;
-  margin: 0.2rem 0;
-  min-height: 1.2rem;
+  line-height: var(--line-height);
+  margin: var(--unit-1) 0;
+  min-height: var(--unit-6);
   padding: 0.1rem 0.4rem 0.1rem 1.2rem;
   position: relative;
 }
@@ -22,17 +23,17 @@
 }
 
 .form-radio input:focus+.form-icon {
-  border-color: #a6a6a6;
+  border-color: var(--gray-disabled-text);
 }
 
 .form-radio input:checked+.form-icon {
-  background: #f4f4f4;
-  border-color: #0078d4;
+  background: var(--bg-color);
+  border-color: var(--secondary-color);
   box-shadow: none;
 }
 
 .form-radio .form-icon {
-  border: 0.05rem solid #adadad;
+  border: var(--border-width) solid var(--gray-disabled-text);
   cursor: pointer;
   display: inline-block;
   position: absolute;
@@ -40,15 +41,15 @@
 }
 
 .form-radio .form-icon {
-  background: #f4f4f4;
-  height: 0.8rem;
+  background: var(--bg-color);
+  height: var(--control-icon-size);
   left: 0;
-  top: 0.2rem;
-  width: 0.8rem;
+  top: var(--unit-1);
+  width: var(--control-icon-size);
 }
 
 .form-radio input:active+.form-icon {
-  background: #f7f7f7;
+  background: var(--bg-color);
 }
 
 .form-radio .form-icon {
@@ -56,7 +57,7 @@
 }
 
 .form-radio input:checked+.form-icon::before {
-  background: #0078d4;
+  background: var(--secondary-color);
   border-radius: 50%;
   content: "";
   height: 8px;
@@ -69,28 +70,28 @@
 
 .has-error .form-radio .form-icon,
 .form-radio.is-error .form-icon {
-  border-color: #e81123;
+  border-color: var(--error-color);
 }
 
 .has-error .form-radio input:checked+.form-icon,
 .form-radio.is-error input:checked+.form-icon {
-  border-color: #e81123;
+  border-color: var(--error-color);
 }
 
 .has-error .form-radio input:checked+.form-icon::before,
 .form-radio.is-error input:checked+.form-icon::before {
-  background: #e81123;
+  background: var(--error-color);
 }
 
 .has-error .form-radio input:focus+.form-icon,
 .form-radio.is-error input:focus+.form-icon {
-  box-shadow: 0 0 0 0.1rem rgba(232, 17, 35, 0.2);
-  border-color: #e81123;
+  box-shadow: 0 0 0 0.1rem var(--saffron-red);
+  border-color: var(--error-color);
 }
 
 .form-radio input:disabled+.form-icon,
 .form-radio input.disabled+.form-icon {
-  background: #f7f7f7;
+  background: var(--bg-color);
   cursor: not-allowed;
   opacity: 0.5;
 }

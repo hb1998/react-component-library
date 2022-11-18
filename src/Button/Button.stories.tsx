@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from '../Layout/Box';
+import  Box  from '../Box/Box';
 import  Button  from '../Button/Button';
 import '../Base.css'
 

@@ -1,5 +1,5 @@
 export interface ITileProps {
-    onClick?: (data:React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;    
+    onClick: (data:React.MouseEvent<HTMLDivElement, MouseEvent>,props:ITileProps) => void;    
     icon?: string;
     title?: string;
     subtitle?: string;

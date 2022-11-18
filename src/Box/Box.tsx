@@ -3,8 +3,7 @@ import classnames from 'classnames';
 import './Box.css';
 import '../Base.css'
 
-
-export const Box = props => {
+const Box:React.FC<any> = (props)=> {
   const {
     className,
     height,
@@ -30,3 +29,4 @@ export const Box = props => {
     </div>
   );
 };
+export default Box;

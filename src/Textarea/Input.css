@@ -1,0 +1,118 @@
+/* 
+  Input.css 
+  - Includes all default styles for the Input component
+*/
+.form-input {
+    box-shadow: none;
+    background: none transparent;
+    margin: 0;
+    padding: 0 0.6rem;
+    box-sizing: border-box;
+    background-image: initial;
+    border: 0.05rem solid #a6a6a6;
+    border-radius: 0;
+    color: #333333;
+    display: block;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    outline: 0px;
+    height: 1.8rem;
+    line-height: 1.2rem;
+    max-width: 100%;
+    position: relative;
+    transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+    width: 100%;
+    margin-top: 6px;
+  }
+  .form-input:hover {
+    border-color: #333333;
+  }
+  .form-input:focus {
+    border-color: #0078d4;
+  }
+  .form-input::placeholder {
+    color: #a6a6a6;
+    font-size: 13px;
+  }
+  .form-input.input-inline {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+  }
+  .form-input[type=file] {
+    height: auto;
+  }
+  
+  .has-icon-left,
+  .has-icon-right {
+    position: relative;
+  }
+  .has-icon-left .form-icon,
+  .has-icon-right .form-icon {
+    height: 0.8rem;
+    margin: 0 0.25rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.8rem;
+    z-index: 2;
+  }
+  
+  .has-icon-left .form-icon {
+    left: 0.05rem;
+  }
+  .has-icon-left .form-input {
+    padding-left: 1.3rem;
+  }
+  
+  .has-icon-right .form-icon {
+    right: 0.05rem;
+  }
+  .has-icon-right .form-input {
+    padding-right: 1.3rem;
+  }
+  
+  .has-success .form-input, .form-input.is-success {
+    background: #fdfef2;
+    border-color: #bad80a;
+  }
+  .has-success .form-input:focus, .form-input.is-success:focus {
+    box-shadow: 0 0 0 0.1rem rgba(186, 216, 10, 0.2);
+  }
+  .has-error .form-input, .form-input.is-error {
+    background: white;
+    border-color: #e81123;
+    color: #e81123;
+  }
+  .has-error .form-input:focus, .form-input.is-error:focus {
+    box-shadow: 0 0 0 0.1rem rgba(232, 17, 35, 0.2);
+  }
+  
+  .form-input:not(:placeholder-shown):invalid {
+    border-color: #e81123;
+    color: #e81123;
+  }
+  .form-input:not(:placeholder-shown):invalid:focus {
+    box-shadow: 0 0 0 0.1rem rgba(232, 17, 35, 0.2);
+    background: white;
+  }
+  .form-input:not(:placeholder-shown):invalid + .form-input-hint {
+    color: #e81123;
+  }
+  
+  .form-input:disabled, .form-input.disabled,
+  .bf-ui-form-select:disabled,
+  .bf-ui-form-select.disabled {
+    background-color: #f7f7f7;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .form-input[readonly] {
+    background-color: #ffffff;
+  }
+  
+  textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm {
+    padding: 0 0.6rem;
+    height: auto;
+  }

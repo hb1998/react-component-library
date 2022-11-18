@@ -1,28 +1,9 @@
 import * as React from 'react';
 import { Component } from 'react';
 import classnames from 'classnames';
+import {IIconProps} from './Icon.types'
 
-interface IIconProps {
-  icon?: string;
-  size?: number;
-  color?: string;
-  onClick?: any;
-  className?: string;
-  fontSize?: number;
-  style?: any;
-  isSVGIcon?: boolean;
-  title?: string;
-}
-
-
-
-export const Icon =( props:IIconProps ) => {
-
-//   static defaultProps = {
-//       size: 14,
-//       style: {}
-//   };
-
+const Icon:React.FC<IIconProps> = ( props:IIconProps ) => {
     const {
       icon,
       size,
@@ -57,3 +38,5 @@ export const Icon =( props:IIconProps ) => {
     );
   }
 
+
+export default Icon;

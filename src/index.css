@@ -112,7 +112,7 @@
 --size-xl: 1280px ;
 --size-2x: 1440px ;
 
---responsive-breakpoint: --size-xs ;
+--responsive-breakpoint: var(--size-xs) ;
 
 /* // Z-index */
 --zindex-0: 1 ;

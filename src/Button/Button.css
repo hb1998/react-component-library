@@ -20,7 +20,7 @@
     min-width: 4rem;
     line-height: var(--line-height);
     outline: transparent;
-    border: 0.05rem solid transparent;
+    border:calc(var(--border-width)*-1) solid transparent;
     border-image: initial;
     border-radius: 0;
     user-select: none;
@@ -160,12 +160,12 @@
   }
   .btn .btn-group .btn:not(:first-child):not(:last-child) {
     border-radius: 0;
-    margin-left:  -0.05rem;
+    margin-left:  calc(var(--border-width)*-1);
   }
   .btn .btn-group .btn:last-child:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    margin-left:  -0.05rem;
+    margin-left:  calc(var(--border-width)*-1);
   }
   .btn .btn-group .btn:focus, .btn .btn-group .btn:hover, .btn .btn-group .btn:active, .btn .btn-group .btn.active {
     z-index: var(--zindex-0);

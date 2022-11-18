@@ -1,20 +1,14 @@
 import * as React from 'react';
 import { Component } from 'react';
 import classnames from 'classnames';
-import { Icon } from "../Icon/Icon";
+import  Icon  from "../Icon/Icon";
 import "./Tile.css";
 import {ITileProps} from './Tile.types'
 import '../Base.css'
 
-
-
-export const Tile = (props:ITileProps) =>{
-
-    const onTileClick = (e) => {
-        const { onClick } = props;
-        if (onClick) {
-          onClick(e);
-        }
+export const Tile:React.FC<ITileProps> = (props:ITileProps) =>{
+      const onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+          props.onClick(e,props);
       }
 
     const {
@@ -38,9 +32,9 @@ export const Tile = (props:ITileProps) =>{
       );
   
       return (
-        <div role="link" className={resolvedClassName} onClick={onTileClick}>
+        <div role="link" className={resolvedClassName} onClick={onClick}>
           <div className="flex-container">
-            <Icon className="tile-icon" icon={icon} size={24} />
+            <Icon className="tile-icon" icon={icon} size={24} onClick={() => { }}/>
             <div className="text-container">
               <div className="tile-title">{title}</div>
               <div className="tile-desc">{subtitle || description}</div>
@@ -49,10 +43,3 @@ export const Tile = (props:ITileProps) =>{
         </div>
       );
 }
-
-// Tile.defaultProps = {
-//         actions: []
-//       };
-
-
-

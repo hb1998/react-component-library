@@ -1,28 +1,30 @@
 /* 
-  Box.scss 
+  Box.css 
   - Includes all default styles for the Box component
 */
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-left: var(--layout-spacing);
+  padding-right: var(--layout-spacing);
   width: 100%;
 }
+
 .container.grid-xl {
   max-width: 1296px;
+  max-height: calc(var(--layout-spacing) * var(--html-font-size));
 }
 .container.grid-lg {
-  max-width: 976px;
+  max-width: calc(calc(var(--grid-spacing)* 2 )  + var(--size-xl));
 }
 .container.grid-md {
-  max-width: 856px;
+  max-width: calc(calc(var(--grid-spacing)* 2 )  + var(--size-md));
 }
 .container.grid-sm {
-  max-width: 616px;
+  max-width: calc(calc(var(--grid-spacing)* 2 )  + var(--size-sm));
 }
 .container.grid-xs {
-  max-width: 496px;
+  max-width: calc(calc(var(--grid-spacing)* 2 )  + var(--size-xs));
 }
 
 .show-xs,
@@ -36,8 +38,8 @@
 .columns {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -0.4rem;
-  margin-right: -0.4rem;
+  margin-left: calc(var(--layout-spacing) -1);
+  margin-right: calc(var(--layout-spacing) -1);
 }
 .columns.col-gapless {
   margin-left: 0;
@@ -55,8 +57,8 @@
 .column {
   flex: 1;
   max-width: 100%;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-left: var(--layout-spacing);
+  padding-right: var(--layout-spacing);
 }
 .column.col-12, .column.col-11, .column.col-10, .column.col-9, .column.col-8, .column.col-7, .column.col-6, .column.col-5, .column.col-4, .column.col-3, .column.col-2, .column.col-1 {
   flex: none;

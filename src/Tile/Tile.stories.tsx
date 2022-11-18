@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box } from '../Layout/Box';
+import Box  from '../Box/Box';
 import { Tile } from "./Tile";
 import './Tile.css';
 
@@ -8,13 +8,14 @@ const TileBasic = (props) => (
   <Box className = "container" >
     <Box className="columns">
       <Box className="column col-3">
-        <Tile
+        <Tile onClick={() => {}}
           title="Default"
           subtitle="This is a test tile, don't click"
         />
       </Box>
       <Box className="column col-3">
         <Tile
+        onClick={() => {}}
           primary
           title="Primary"
           subtitle="This is a test tile, don't click"
@@ -22,6 +23,7 @@ const TileBasic = (props) => (
       </Box>
       <Box className="column col-3">
         <Tile
+        onClick={() => {}}
           secondary
           title="Secondary"
           subtitle="This is a test tile, don't click"
@@ -29,6 +31,7 @@ const TileBasic = (props) => (
       </Box>
       <Box className="column col-3">
         <Tile
+        onClick={() => {}}
           disabled
           title="Disabled"
           subtitle="This is a test tile, don't click"
@@ -43,6 +46,7 @@ const TileIcon = (props) => (
     <Box className="columns">
       <Box className="column col-3">
         <Tile
+        onClick={(e) => e}
           icon="Refresh"
           title="Default"
           subtitle="This is a test tile, don't click"
@@ -50,6 +54,7 @@ const TileIcon = (props) => (
       </Box>
       <Box className="column col-3">
         <Tile
+        onClick={(e) => e}
           primary
           icon="Search"
           title="Primary"
@@ -58,6 +63,7 @@ const TileIcon = (props) => (
       </Box>
       <Box className="column col-3">
         <Tile
+        onClick={(e) => e}
           secondary
           icon="Settings"
           title="Secondary"
@@ -66,6 +72,7 @@ const TileIcon = (props) => (
       </Box>
       <Box className="column col-3">
         <Tile
+        onClick={(e) => e}
           disabled
           icon="Message"
           title="Disabled"

@@ -13,7 +13,7 @@ export interface IProps {
   min?: number;
   max?: number;
   maxLength?: number;
-  onChange?: (data:string|number)=>void
+  onChange?: (data: string | number) => void
   onKeyPress?: React.KeyboardEventHandler<HTMLInputElement>;
   title?: string;
   autoComplete?: string;

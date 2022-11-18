@@ -21,10 +21,19 @@
   }
 }
 
-:root{
-  --color:#333333;
-  --shade:#a6a6a6;
-  --border-red-color:#e81123;
-  --box-shadow-color:rgba(232, 17, 35, 0.2);
-  --background-color:white;
+:root {
+  --gray-disabled-text: #a6a6a6;
+  --body-font-color: #333333;
+  --secondary-color: #0078d4;
+  --success-color: #bad80a ;
+  --border-red-color: #e81123;
+  --box-shadow-color: rgba(232, 17, 35, 0.2);
+  --background-color: white;
+  --font-size: 13px;
+  --control-icon-size:0.8rem;
+  --control-size: 1.8rem;
+  --line-height: 1.2rem;
+  --border-width: 0.05rem;
+  --bg-color:#ffffff;
+  --bg-color-dark:#f7f7f7;
 }

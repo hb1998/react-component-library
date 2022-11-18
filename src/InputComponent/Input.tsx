@@ -1,9 +1,9 @@
-import React, {ReactNode, useEffect } from 'react'
+import React, { ReactNode, useEffect } from 'react'
 import classnames from "classnames";
 import "./Input.css";
 import { IProps } from './Input.types';
 
-const Input = (props: IProps) => {
+const Input: React.FC<IProps> = (props: IProps) => {
   const inputRef: React.RefObject<HTMLInputElement> = React.createRef()
 
   useEffect(() => {
@@ -12,30 +12,26 @@ const Input = (props: IProps) => {
     }, 0);
   }, [props.autoFocus])
 
-
-  const onEventChange = (e: { target: { value: string; }; }) => {
+  const onChange = (e: any) => {
     const { type } = props;
 
     if (type == "number") {
       props.onChange(e.target.value ? parseFloat(e.target.value) : "");
-      return;
     }
 
-    props.onChange(e.target.value);
-    return;
+    props.onChange(e.target.value)
   };
 
-  const onEventBlur = (e: { target: { value: string; }; }) => {
+  const onBlur = (e: { target: { value: string; }; }) => {
     const { type } = props;
 
     if (type == "number") {
       props.onBlur(e.target.value ? parseFloat(e.target.value) : "");
-      return;
     }
 
     props.onBlur(e.target.value);
-    return;
   };
+
   const {
     icon,
     value,
@@ -74,8 +70,8 @@ const Input = (props: IProps) => {
       max={max}
       maxLength={maxLength}
       onKeyDown={onKeyPress}
-      onChange={onEventChange}
-      onBlur={onEventBlur}
+      onChange={onChange}
+      onBlur={onBlur}
       step="any"
       autoComplete={autoComplete}
     />

@@ -9,15 +9,15 @@
     padding: 0 0.6rem;
     box-sizing: border-box;
     background-image: initial;
-    border: 0.05rem solid #a6a6a6;
+    border: var(--border-width) solid var(--gray-disabled-text);
     border-radius: 0;
-    color: var(--color);
+    color: var(--body-font-color);
     display: block;
-    font-size: 13px;
+    font-size: var(--font-size);
     text-overflow: ellipsis;
     outline: 0px;
-    height: 1.8rem;
-    line-height: 1.2rem;
+    height: var(--control-size);
+    line-height: var(--line-height);
     max-width: 100%;
     position: relative;
     transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
@@ -25,14 +25,14 @@
     margin-top: 6px;
   }
   .form-input:hover {
-    border-color: var(--color);
+    border-color: var(--body-font-color);
   }
   .form-input:focus {
-    border-color: #0078d4;
+    border-color: var(--secondary-color);
   }
   .form-input::placeholder {
-    color: var(--shade);
-    font-size: 13px;
+    color: var(--gray-disabled-text);
+    font-size: var(--font-size);
   }
   .form-input.input-inline {
     display: inline-block;
@@ -49,32 +49,32 @@
   }
   .has-icon-left .form-icon,
   .has-icon-right .form-icon {
-    height: 0.8rem;
+    height: var(--control-icon-size);
     margin: 0 0.25rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 0.8rem;
+    width: var(--control-icon-size);
     z-index: 2;
   }
   
   .has-icon-left .form-icon {
-    left: 0.05rem;
+    left: var(--border-width)
   }
   .has-icon-left .form-input {
     padding-left: 1.3rem;
   }
   
   .has-icon-right .form-icon {
-    right: 0.05rem;
+    right: var(--border-width)
   }
   .has-icon-right .form-input {
     padding-right: 1.3rem;
   }
   
   .has-success .form-input, .form-input.is-success {
-    background: #fdfef2;
-    border-color: #bad80a;
+    background: lighten(var(--success-color), 53%);
+    border-color: var(--success-color);
   }
   .has-success .form-input:focus, .form-input.is-success:focus {
     box-shadow: 0 0 0 0.1rem rgba(186, 216, 10, 0.2);
@@ -103,13 +103,13 @@
   .form-input:disabled, .form-input.disabled,
   .bf-ui-form-select:disabled,
   .bf-ui-form-select.disabled {
-    background-color: #f7f7f7;
+    background-color: var(--bg-color-dark);
     cursor: not-allowed;
     opacity: 0.5;
   }
   
   .form-input[readonly] {
-    background-color: #ffffff;
+    background-color: var(--bg-color);
   }
   
   textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm {
